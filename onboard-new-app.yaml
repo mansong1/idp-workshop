@@ -6,7 +6,7 @@ metadata:
   title: Provision a New Application Pattern
   description: Creates a new GitHub repository according to standardized application patterns
 spec:
-  owner: TeamA
+  owner: cncf
   type: service
   # these are the steps which are rendered in the frontend with the form input
   parameters:
@@ -35,14 +35,14 @@ spec:
           title: Harness Token
           type: string
           ui:widget: password
-          ui:field: HarnessAuthToken       
+          ui:field: HarnessAuthToken
   # here's the steps that are executed in series in the scaffolder backend
   steps:
     - id: trigger
       name: Provision a New Application Pattern
       action: trigger:harness-custom-pipeline
       input:
-        url: "https://app.harness.io/ng/account/IFG41DWvSnaRLOVNB2uesg/module/idp-admin/orgs/idp/projects/SelfService_Onboarding/pipelines/OnboardAppPipeline/pipeline-studio?storeType=INLINE"
+        url: "https://app.harness.io/ng/account/BKB_Vic2RbWnsMSUAWTgXw/all/orgs/default/projects/SelfService_Onboading/pipelines/OnboardAppPipeline/pipeline-studio?storeType=INLINE"
         inputset:
           github_repo_name: ${{ parameters.github_repo_name }}
           github_repo_description: ${{ parameters.github_repo_description }}
