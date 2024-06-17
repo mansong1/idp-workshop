@@ -24,8 +24,8 @@ spec:
   owner: cncf
   lifecycle: experimental
 #  system: Demo
-dependsOn:
-#    - component:default/mansong-service
+   dependsOn:
+     - component:default/mansong-service
 #  consumesApis:
 #    - user-api
 #  providesApis:
